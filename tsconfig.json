@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "nodenext",
+    "allowJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "declarationDir": "./types"
+  },
+  "include": [
+    "lib", 
+    "types"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
