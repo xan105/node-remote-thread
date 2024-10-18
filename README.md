@@ -71,5 +71,5 @@ API
 
 Injects the specified DLL located at _filePath_ into the process identified by the given _pid_.
 
-❌ This function will throw if you are not running on Windows x86/x64.
+❌ This function will throw if you are not running on Windows x86/x64.<br />
 ❌ This function will throw on unexpected error.
