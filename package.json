@@ -1,0 +1,80 @@
+{
+  "name": "@xan105/remote-thread",
+  "version": "1.0.0",
+  "description": "NAPI Native addon for Windows DLL injection with support for Wow64 and Unicode path",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "files": [
+    "/lib",
+    "/src",
+    "/prebuild",
+    "/types",
+    "/binding.gyp"
+  ],
+  "engines": {
+    "node": ">=20.18.0",
+    "npm": "^10.8.2"
+  },
+  "gypfile": true,
+  "scripts": {
+    "install": "node-gyp-load",
+    "build:x86": "node-gyp rebuild --arch=ia32",
+    "build:x64": "node-gyp rebuild --arch=x64",
+    "clean": "node-gyp clean",
+    "lint": "biome lint",
+    "declare": "tsc --emitDeclarationOnly"
+  },
+  "keywords": [
+    "DLL",
+    "Injection",
+    "CreateRemoteThread",
+    "LoadLibrary",
+    "Kernel32",
+    "Wow64",
+    "Unicode"
+  ],
+  "author": {
+    "name": "Anthony Beaumont",
+    "email": "dev.xan105@outlook.be",
+    "url": "https://xan105.com/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xan105/node-remote-thread.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xan105/node-remote-thread/issues"
+  },
+  "homepage": "https://github.com/xan105/node-remote-thread#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/xan105"
+    },
+    {
+      "type": "paypal",
+      "url": "https://www.paypal.me/xan105"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/xan105"
+    }
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@types/node": "^22.7.4",
+    "node-gyp": "^10.2.0",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@xan105/error": "^1.7.1",
+    "@xan105/is": "^2.9.3",
+    "node-gyp-load": "^1.1.1"
+  }
+}
