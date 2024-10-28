@@ -1,6 +1,6 @@
 {
   "name": "@xan105/remote-thread",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NAPI Native addon for Windows DLL injection with support for Wow64 and Unicode path",
   "type": "module",
   "exports": {
