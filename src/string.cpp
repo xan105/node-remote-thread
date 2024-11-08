@@ -6,13 +6,9 @@ found in the LICENSE file in the root directory of this source tree.
 
 #include "string.h"
 
-std::wstring toWString(const std::string& s)
-{
-    int length;
-    int slength = (int)s.length() + 1;
-    length = MultiByteToWideChar(CP_UTF8, 0, s.c_str(), slength, 0, 0);
-    std::wstring buf;
-    buf.resize(length);
-    MultiByteToWideChar(CP_UTF8, 0, s.c_str(), slength, const_cast<wchar_t*>(buf.c_str()), length);
+std::wstring toWString(const std::string& s) {
+    int size = MultiByteToWideChar(CP_UTF8, 0, s.c_str(), (int)s.length(), nullptr, 0);
+    std::wstring buf(size, L'\0');
+    MultiByteToWideChar(CP_UTF8, 0, s.c_str(), (int)s.length(), &buf[0], size);
     return buf;
 }
