@@ -9,7 +9,7 @@ This is a simple injector using the classic `createRemoteThread()` + `LoadLibrar
   + can inject x64 DLL into x64 processes.
   + can inject x86 DLL into x86 processes (Wow64).
 - x86 injector 
-  + can inject x86 DLL into X86 processes.
+  + can inject x86 DLL into x86 processes.
 
 📦 Scoped `@xan105` packages are for my own personal use but feel free to use them.
 
