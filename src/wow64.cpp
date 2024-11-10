@@ -59,7 +59,7 @@ DWORD GetProcAddressFromExportAddressTable(HANDLE hProcess, LPCSTR moduleName, L
     WORD currentFunctionNameOrdinalsPtr;
     DWORD currentFunctionVirtualAddress;
 
-    char currentFunctionName[4096];
+    char currentFunctionName[4096] = { 0 };
 
     ReadProcessMemory(hProcess, reinterpret_cast<LPVOID>(modBase + exportDirectory.AddressOfNames + (i * sizeof(DWORD))), &currentFunctionNamePtr, sizeof(DWORD), nullptr);
     ReadProcessMemory(hProcess, reinterpret_cast<LPVOID>(modBase + currentFunctionNamePtr), &currentFunctionName, sizeof(currentFunctionName), nullptr);
