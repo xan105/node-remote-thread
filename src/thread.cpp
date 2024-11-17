@@ -8,7 +8,7 @@ found in the LICENSE file in the root directory of this source tree.
 
 LPTHREAD_START_ROUTINE GetProcAddressFrom(HANDLE hProcess, LPCSTR moduleName, LPCSTR procName){
 
-  #ifdef _WIN64
+  #ifdef _M_X64
   #pragma warning(disable : 4312)
     BOOL isWow64 = FALSE;
     if (IsWow64Process(hProcess, &isWow64)) {

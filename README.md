@@ -10,6 +10,8 @@ This is a simple injector using the classic `createRemoteThread()` + `LoadLibrar
   + can inject x86 DLL into x86 processes (Wow64).
 - x86 injector 
   + can inject x86 DLL into x86 processes.
+- ARM64 injector (Untested)
+  + *should* inject ARM64 DLL into ARM64 processes.
 
 📦 Scoped `@xan105` packages are for my own personal use but feel free to use them.
 
@@ -48,7 +50,7 @@ Installation
 npm install @xan105/remote-thread
 ```
 
-🚀 x86 and x64 prebuilt binary provided.
+🚀 x86, x64 and ARM64 prebuilt binary provided.
 
 Force compiling:
 ```
@@ -58,7 +60,7 @@ npm install @xan105/remote-thread --build-from-source
 You will need C/C++ build tools and Python 3.x (node-gyp) to build this module.<br />
 
 > [!IMPORTANT]  
-> This package doesn't have any installation restrictions in its package.json file to facilitate multi-platform development; however, it is designed to work only on Windows with x86/x64 architecture.
+> This package doesn't have any installation restrictions in its package.json file to facilitate multi-platform development; however, it is designed to work only on Windows with x86/x64 architecture. ARM64 is untested.
 
 API
 ===

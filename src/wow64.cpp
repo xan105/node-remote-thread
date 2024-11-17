@@ -6,7 +6,7 @@ found in the LICENSE file in the root directory of this source tree.
 
 #include "wow64.h"
 
-#ifdef _WIN64
+#ifdef _M_X64
   #pragma warning(disable : 4302)
   #pragma warning(disable : 4311)
   #pragma warning(disable : 4312)

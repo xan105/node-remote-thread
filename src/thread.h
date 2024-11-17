@@ -10,7 +10,7 @@ found in the LICENSE file in the root directory of this source tree.
 #include <windows.h>
 #include "string.h"
 
-#ifdef _WIN64
+#ifdef _M_X64
   #include "wow64.h"
 #endif
 
